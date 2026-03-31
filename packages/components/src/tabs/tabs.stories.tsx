@@ -26,7 +26,7 @@ type Story = StoryObj<typeof Tabs>;
 
 export const Default: Story = {
   render: () => (
-    <Tabs>
+    <Tabs defaultTabIndex={1}>
       <Tab title="First">Content for the first tab.</Tab>
       <Tab title="Second">Content for the second tab.</Tab>
       <Tab title="Third">Content for the third tab.</Tab>

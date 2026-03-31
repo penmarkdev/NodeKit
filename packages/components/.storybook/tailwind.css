@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4ade80;
+  --color-foreground: rgba(0, 0, 0, 0.8);
+  --color-muted: rgba(0, 0, 0, 0.5);
+  --color-border: rgba(0, 0, 0, 0.1);
+  --font-body: 'Geist', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+}
