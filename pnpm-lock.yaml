@@ -27,15 +27,9 @@ importers:
       '@sprocketui-react/tabs':
         specifier: ^1.1.11
         version: 1.1.11(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@tailwindcss/vite':
-        specifier: ^4.2.2
-        version: 4.2.2(vite@6.4.1(jiti@2.6.1)(lightningcss@1.32.0)(sass@1.98.0))
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      tailwindcss:
-        specifier: ^4.2.2
-        version: 4.2.2
     devDependencies:
       '@storybook/addon-essentials':
         specifier: ^8.6.14
@@ -49,6 +43,9 @@ importers:
       '@storybook/react-vite':
         specifier: ^8.6.18
         version: 8.6.18(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(rollup@4.60.1)(storybook@8.6.18(prettier@3.8.1))(typescript@5.9.3)(vite@6.4.1(jiti@2.6.1)(lightningcss@1.32.0)(sass@1.98.0))
+      '@tailwindcss/vite':
+        specifier: ^4.2.2
+        version: 4.2.2(vite@6.4.1(jiti@2.6.1)(lightningcss@1.32.0)(sass@1.98.0))
       '@types/react':
         specifier: ^19.0.0
         version: 19.2.14
@@ -61,12 +58,12 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.2.4(react@19.2.4)
-      sass:
-        specifier: ^1.98.0
-        version: 1.98.0
       storybook:
         specifier: ^8.6.18
         version: 8.6.18(prettier@3.8.1)
+      tailwindcss:
+        specifier: ^4.2.2
+        version: 4.2.2
       tsup:
         specifier: ^8.5.1
         version: 8.5.1(jiti@2.6.1)(postcss@8.5.8)(typescript@5.9.3)
@@ -4863,7 +4860,8 @@ snapshots:
 
   html-tags@4.0.0: {}
 
-  immutable@5.1.5: {}
+  immutable@5.1.5:
+    optional: true
 
   inherits@2.0.4: {}
 
@@ -5258,6 +5256,7 @@ snapshots:
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.6
+    optional: true
 
   scheduler@0.27.0: {}
 

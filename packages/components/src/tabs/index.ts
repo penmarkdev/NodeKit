@@ -6,4 +6,4 @@
  *
  */
 
-export { Tabs, Tab } from './tabs';
+export { Tabs, Tabs as PenmarkTabs, Tab, Tab as PenmarkTab } from './tabs';

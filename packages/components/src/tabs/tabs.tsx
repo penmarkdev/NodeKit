@@ -21,9 +21,9 @@ import { Children, isValidElement, forwardRef, useMemo } from 'react';
 
 import type { ReactElement, ReactNode, ForwardedRef } from 'react';
 
-export const Tab = ({ children, title, className }: { title: string; id?: string; className?: string; children?: ReactNode }): ReactElement => (
+export const Tab = ({ children, title, id, className }: { title: ReactNode; id?: string; className?: string; children?: ReactNode }): ReactElement => (
   <SprocketTabPanel
-    value={slugify(title, { lower: true, strict: true })}
+    value={id ?? slugify(typeof title === 'string' ? title : 'tab', { lower: true, strict: true })}
     className={cn('text-foreground text-sm', className)}
   >
     {children}
@@ -40,7 +40,7 @@ export const Tabs = forwardRef<
 >(({ defaultTabIndex = 0, className, children }, ref: ForwardedRef<HTMLDivElement>): ReactElement => {
   const arrayChildren = useMemo(() => {
     return Children.toArray(children).filter(
-      (child): child is ReactElement<{ title: string; id?: string; children?: ReactNode }> =>
+      (child): child is ReactElement<{ title: ReactNode; id?: string; children?: ReactNode }> =>
         isValidElement(child),
     );
   }, [children]);
@@ -49,11 +49,11 @@ export const Tabs = forwardRef<
 
   const tabs = useMemo(() => {
     return arrayChildren.map((child) => {
-      const title: string = child.props.title;
+      const title = child.props.title;
 
       return {
         title,
-        value: child.props.id ?? slugify(title, { lower: true, strict: true }),
+        value: child.props.id ?? slugify(typeof title === 'string' ? title : 'tab', { lower: true, strict: true }),
       };
     });
   }, [arrayChildren]);

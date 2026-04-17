@@ -6,5 +6,5 @@
  *
  */
 
-export { Badge } from './badge';
-export { Tabs, Tab } from './tabs';
+export * from './badge';
+export * from './tabs';
